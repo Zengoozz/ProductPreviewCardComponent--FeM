@@ -1,86 +1,140 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500;700");
 @import url("https://fonts.googleapis.com/css?family=Fraunces:700");
-body {
-    background: hsl(30, 38%, 92%);
+
+:root {
+    --darkcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    --darkblue: hsl(212, 21%, 14%);
+    --grayishblue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --fraunces: "Fraunces", serif;
+    --monsterat: "Montserrat", sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    font-family: 'Montserrat';
-    font-size: 14px;
+    box-sizing: border-box;
 }
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--cream);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--monsterat);
+}
+
 .product-card {
-    width:40vw;
-    height: 70vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    background-color: white;
-    margin: 13vh auto;
+    width: 595px;
+    height: 450px;
+    display: flex;
     border-radius: 20px;
 }
-.image-container img {
-    width: 20vw;
-    height: 70vh;
+
+.product-card img {
+    width: 50%;
+    height: 100%;
     border-radius: 20px 0 0 20px;
+    object-fit: cover;
 }
-.info-container{
-    width: 15vw;
-    max-height: 70vh;
-    text-align: left;
-    margin: 3vw;
-    box-sizing: border-box;
+
+.info-container {
+    width: 50%;
+    height: 100%;
+    background-color: var(--white);
+    border-radius: 0 20px 20px 0;
+    padding: 2rem;
 }
+
 .info-container .title {
-    letter-spacing: 5px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
+    line-height: 1rem;
+    color: var(--grayishblue);
+    opacity: 0.8;
 }
-.info-container h1{
-    font-family: 'Fraunces';
-    font-size: 3em;
-}
-.info-container p {
-    word-spacing: 5px;
-    line-height: 30px;
-}
-.price {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-}
-.price .current {
-    color: hsl(158, 36%, 37%);
-    box-sizing: border-box;
-}
-.price .before {
-    text-decoration: line-through;
-    padding: 0 20px;
-}
-.info-container button{
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(158, 36%, 37%);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
+
+.info-container h1 {
+    font-family: var(--fraunces);
+    font-size: 2rem;
     font-weight: 700;
+    line-height: 1.95rem;
+    margin: 1.55rem 0;
+}
+
+.info-container p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.4rem;
+    color: var(--grayishblue);
+}
+
+.price {
+    width: 100%;
+    display: flex;
+    height: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+.price .current {
+    height: 100%;
+    align-self: center;
+    color: var(--darkcyan);
+    font-family: var(--fraunces);
+    font-size: 2rem;
     
 }
-.button-icon {
-    width: 2vh;
-    height: 2vh;
-    padding-right: 10px;
+
+.price .before {
+    margin: 0 0 0 1.5rem;
+    align-self: center;
+    font-size: 0.9rem;
+    color: var(--grayishblue);
+    text-decoration: line-through;
+    opacity: 0.8;
 }
-button:hover{
-    background-color: hsl(158, 36%, 27%);
+
+.info-container button {
+    display: flex;
+    width: 100%;
+    height: 2.95rem;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--darkcyan);
+    background-image: url("./images/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x:30% ;
+    color: var(--white);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding-left: 20px;
+}
+button:hover {
+    background-color: var(--darkblue);
+    opacity: 0.8;
+    transition: all 0.25s ease-in-out;
     cursor: pointer;
 }
+
 .attribution {
     font-family: 'Fraunces';
-    font-size: 14px;
     text-align: center;
 }
 

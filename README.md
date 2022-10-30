@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Zengoozz/ProductPreviewCardComponent--FeM)
-- Live Site URL: [Github Live](https://your-live-site-url.com)
+- Live Site URL: [Github Live](https://zengoozz.github.io/ProductPreviewCardComponent--FeM/)
 
 ## My process
 
